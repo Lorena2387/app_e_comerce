@@ -1,3 +1,4 @@
+import 'package:app_e_comerce/Utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class MainFoodPage extends StatefulWidget {
@@ -10,27 +11,41 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Container(
-        child: Row(
-          children: [
-            Column(
+    return Scaffold(
+        body: Column(
+      children: [
+        Container(
+          child: Container(
+            margin: EdgeInsets.only(top: 45, bottom: 15),
+            padding: EdgeInsets.only(left: 20, right: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Contry"),
-                Text("City"),
+                Column(
+                  children: [
+                    Text("Contry"),
+                    Text("City"),
+                  ],
+                ),
+                Center(
+                  child: Container(
+                    width: 45,
+                    height: 45,
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: AppColors.mainColor,
+                    ),
+                  ),
+                )
               ],
             ),
-            Container(
-              width: 45,
-              height: 45,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.blue,
-              ),
-            )
-          ],
+          ),
         ),
-      ),
-    );
+      ],
+    ));
   }
 }
