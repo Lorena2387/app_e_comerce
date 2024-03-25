@@ -1,5 +1,6 @@
 import 'package:app_e_comerce/Utils/app_colors.dart';
 import 'package:app_e_comerce/widgets/big_text.dart';
+import 'package:app_e_comerce/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class MainFoodPage extends StatefulWidget {
@@ -28,7 +29,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       text: "Bangladesh",
                       color: AppColors.mainColor,
                     ),
-                    Text("City"),
+                    SmallText(
+                      text: "Narsigndi",
+                      color: Colors.black54,
+                    )
                   ],
                 ),
                 Center(
