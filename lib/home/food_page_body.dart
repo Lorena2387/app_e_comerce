@@ -1,3 +1,5 @@
+import 'package:app_e_comerce/Utils/app_colors.dart';
+import 'package:app_e_comerce/widgets/big_text.dart';
 import 'package:flutter/material.dart';
 
 class FoodPageBody extends StatefulWidget {
@@ -41,10 +43,35 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           alignment: Alignment.bottomCenter,
           child: Container(
             height: 140,
-            margin: EdgeInsets.only(left: 20, right: 20, bottom: 15),
+            margin: EdgeInsets.only(left: 30, right: 30, bottom: 15),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: Colors.white,
+            ),
+            child: Container(
+              padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  BigText(text: "Tray Paisa"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Wrap(
+                        children: List.generate(
+                            5,
+                            (index) => Icon(
+                                  Icons.star,
+                                  color: AppColors.mainColor,
+                                  size: 15,
+                                )),
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ),
