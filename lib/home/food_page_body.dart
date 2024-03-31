@@ -1,5 +1,7 @@
 import 'package:app_e_comerce/Utils/app_colors.dart';
 import 'package:app_e_comerce/widgets/big_text.dart';
+import 'package:app_e_comerce/widgets/icon_and_text_widget.dart';
+import 'package:app_e_comerce/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class FoodPageBody extends StatefulWidget {
@@ -29,11 +31,11 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       children: [
         Container(
           height: 220,
-          margin: EdgeInsets.only(left: 5, right: 5),
+          margin: const EdgeInsets.only(left: 10, right: 10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             color: index.isEven ? Color(0xFF69c5df) : Color(0xFF9294cc),
-            image: DecorationImage(
+            image: const DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage("asset/images/food1.png"),
             ),
@@ -42,19 +44,19 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            height: 140,
-            margin: EdgeInsets.only(left: 30, right: 30, bottom: 15),
+            height: 120,
+            margin: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: Colors.white,
             ),
             child: Container(
-              padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+              padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   BigText(text: "Tray Paisa"),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -67,7 +69,44 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                                   color: AppColors.mainColor,
                                   size: 15,
                                 )),
-                      )
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      SmallText(text: "4.5"),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      SmallText(text: "1287"),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      SmallText(text: "comments")
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      IconAndTextWidget(
+                        icon: Icons.circle_sharp,
+                        text: "Normal",
+                        color: AppColors.mainColor,
+                        iconColor: AppColors.iconColor1,
+                      ),
+                      IconAndTextWidget(
+                        icon: Icons.location_on,
+                        text: "1.7km",
+                        color: AppColors.mainColor,
+                        iconColor: AppColors.mainColor,
+                      ),
+                      IconAndTextWidget(
+                        icon: Icons.access_time_rounded,
+                        text: "32min",
+                        color: AppColors.mainColor,
+                        iconColor: AppColors.iconColor2,
+                      ),
                     ],
                   )
                 ],
