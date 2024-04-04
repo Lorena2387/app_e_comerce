@@ -50,6 +50,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           dotsCount: 5,
           position: _currPageValue,
           decorator: DotsDecorator(
+            activeColor: AppColors.mainColor,
             size: const Size.square(9.0),
             activeSize: const Size(18.0, 9.0),
             activeShape: RoundedRectangleBorder(
@@ -163,6 +164,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       height: 20,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconAndTextWidget(
                           icon: Icons.circle_sharp,
