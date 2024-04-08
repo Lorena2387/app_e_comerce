@@ -1,4 +1,5 @@
 import 'package:app_e_comerce/Utils/app_colors.dart';
+import 'package:app_e_comerce/Utils/dimensions.dart';
 import 'package:app_e_comerce/home/food_page_body.dart';
 import 'package:app_e_comerce/widgets/big_text.dart';
 import 'package:app_e_comerce/widgets/small_text.dart';
@@ -20,8 +21,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
       children: [
         Container(
           child: Container(
-            margin: EdgeInsets.only(top: 45, bottom: 15),
-            padding: EdgeInsets.only(left: 20, right: 20),
+            margin: EdgeInsets.only(
+                top: Dimensions.height45, bottom: Dimensions.height15),
+            padding: EdgeInsets.only(
+                left: Dimensions.width20, right: Dimensions.width20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -44,14 +47,15 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 ),
                 Center(
                   child: Container(
-                    width: 45,
-                    height: 45,
+                    width: Dimensions.height45,
+                    height: Dimensions.height45,
                     child: Icon(
                       Icons.search,
                       color: Colors.white,
+                      size: Dimensions.iconSize24,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(Dimensions.radius15),
                       color: AppColors.mainColor,
                     ),
                   ),
