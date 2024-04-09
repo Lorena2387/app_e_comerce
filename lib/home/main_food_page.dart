@@ -42,7 +42,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         ),
                         Icon(Icons.arrow_drop_down_rounded)
                       ],
-                    )
+                    ),
                   ],
                 ),
                 Center(
