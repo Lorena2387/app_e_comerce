@@ -28,8 +28,12 @@ class Dimensions {
 
   //icon Size
   static double iconSize24 = screenHeight / 35.5;
+  static double iconSize16 = screenHeight / 53.25;
 
   //list viw size
   static double ListViwImgSize = screenWidth / 7.1;
   static double ListViwTextContSize = screenWidth / 8.52;
+
+  //popular food
+  static double popularFoodImgSize = screenHeight / 2.43;
 }
