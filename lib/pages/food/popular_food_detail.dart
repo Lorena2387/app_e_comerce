@@ -3,8 +3,7 @@ import 'package:app_e_comerce/Utils/dimensions.dart';
 import 'package:app_e_comerce/widgets/app_colum.dart';
 import 'package:app_e_comerce/widgets/app_icon.dart';
 import 'package:app_e_comerce/widgets/big_text.dart';
-import 'package:app_e_comerce/widgets/icon_and_text_widget.dart';
-import 'package:app_e_comerce/widgets/small_text.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -59,11 +58,36 @@ class PopularFoodDetail extends StatelessWidget {
                   ),
                   color: Colors.white,
                 ),
-                child: AppColumn(
-                  text: "Peas with meat dish",
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AppColumn(
+                      text: "Peas with meat dish",
+                    ),
+                    SizedBox(
+                      height: Dimensions.height20,
+                    ),
+                    BigText(text: "Introduce")
+                  ],
                 )),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: 120,
+        padding: EdgeInsets.only(
+          top: Dimensions.height30,
+          bottom: Dimensions.height30,
+          left: Dimensions.width20,
+          right: Dimensions.width20,
+        ),
+        decoration: BoxDecoration(
+          color: AppColors.buttonBackgroundColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Dimensions.radius20 * 2),
+            topRight: Radius.circular(Dimensions.radius20),
+          ),
+        ),
       ),
     );
   }
