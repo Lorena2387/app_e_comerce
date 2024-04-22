@@ -3,6 +3,7 @@ import 'package:app_e_comerce/Utils/dimensions.dart';
 import 'package:app_e_comerce/widgets/app_colum.dart';
 import 'package:app_e_comerce/widgets/app_icon.dart';
 import 'package:app_e_comerce/widgets/big_text.dart';
+import 'package:app_e_comerce/widgets/small_text.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -90,6 +91,7 @@ class PopularFoodDetail extends StatelessWidget {
           ),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               padding: EdgeInsets.only(
@@ -122,6 +124,21 @@ class PopularFoodDetail extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                top: Dimensions.height20,
+                bottom: Dimensions.height20,
+                left: Dimensions.width20,
+                right: Dimensions.width20,
+              ),
+              child: BigText(
+                text: "\$10 | Add to cart",
+                color: Colors.white,
+              ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(Dimensions.radius20),
+                  color: AppColors.mainColor),
             )
           ],
         ),
