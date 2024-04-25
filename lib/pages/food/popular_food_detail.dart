@@ -17,6 +17,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          //background image
           Positioned(
             left: 0,
             right: 0,
@@ -31,6 +32,7 @@ class PopularFoodDetail extends StatelessWidget {
               ),
             ),
           ),
+          //icon widgets
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -43,6 +45,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //introduction of food
           Positioned(
             left: 0,
             right: 0,
@@ -73,10 +76,11 @@ class PopularFoodDetail extends StatelessWidget {
                   ],
                 )),
           ),
+          //expandable text widget
         ],
       ),
       bottomNavigationBar: Container(
-        height: 120,
+        height: Dimensions.bottomHeigthBar,
         padding: EdgeInsets.only(
           top: Dimensions.height30,
           bottom: Dimensions.height30,
