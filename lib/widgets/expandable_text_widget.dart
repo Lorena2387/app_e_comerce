@@ -1,4 +1,6 @@
+import 'package:app_e_comerce/Utils/app_colors.dart';
 import 'package:app_e_comerce/Utils/dimensions.dart';
+import 'package:app_e_comerce/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class ExpandableTextWidget extends StatefulWidget {
@@ -32,6 +34,36 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: secondHalf.isEmpty
+          ? SmallText(text: firstHalf)
+          : Column(
+              children: [
+                SmallText(
+                    text: hiddenText
+                        ? (firstHalf + "...")
+                        : (firstHalf + secondHalf)),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      hiddenText = !hiddenText;
+                    });
+                  },
+                  child: Row(
+                    children: [
+                      SmallText(
+                        text: "Show more",
+                        color: AppColors.mainColor,
+                      ),
+                      Icon(
+                        Icons.arrow_drop_down,
+                        color: AppColors.mainColor,
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+    );
   }
 }

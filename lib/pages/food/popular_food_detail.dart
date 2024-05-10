@@ -3,6 +3,7 @@ import 'package:app_e_comerce/Utils/dimensions.dart';
 import 'package:app_e_comerce/widgets/app_colum.dart';
 import 'package:app_e_comerce/widgets/app_icon.dart';
 import 'package:app_e_comerce/widgets/big_text.dart';
+import 'package:app_e_comerce/widgets/expandable_text_widget.dart';
 import 'package:app_e_comerce/widgets/small_text.dart';
 
 import 'package:flutter/material.dart';
@@ -72,11 +73,17 @@ class PopularFoodDetail extends StatelessWidget {
                     SizedBox(
                       height: Dimensions.height20,
                     ),
-                    BigText(text: "Introduce")
+                    BigText(text: "Introduce"),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: ExpandableTextWidget(
+                            text:
+                                "Prepara nuestras genuinas Arvejas verdes partidas premium, seleccionados manualmente para darte la mejor calidad y en su envase 100% reciclable más amigable con el medio ambiente.Las arvejas verdes de Iansa Agro son una excelente fuente de proteína vegetal , te recomendamos consumirlas con cereales para lograr una proteína de alto valor biológico. Además son una buena fuente de fibra dietética, otorgando una sensación de saciedad prolongada. También contienen minerales esenciales para nuestro organismo como el hierro, necesario para transportar oxígeno a todo nuestro cuerpo, fósforo y zinc. Conoce los detalles de cada nutriente que aportan las arvejas verdes partidas de Iansa Agro a tu dieta en la tabla con información nutricional en esta página."),
+                      ),
+                    )
                   ],
                 )),
           ),
-          //expandable text widget
         ],
       ),
       bottomNavigationBar: Container(
