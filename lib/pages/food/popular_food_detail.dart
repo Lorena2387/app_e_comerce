@@ -4,7 +4,7 @@ import 'package:app_e_comerce/widgets/app_colum.dart';
 import 'package:app_e_comerce/widgets/app_icon.dart';
 import 'package:app_e_comerce/widgets/big_text.dart';
 import 'package:app_e_comerce/widgets/expandable_text_widget.dart';
-import 'package:app_e_comerce/widgets/small_text.dart';
+//import 'package:app_e_comerce/widgets/small_text.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -53,39 +53,40 @@ class PopularFoodDetail extends StatelessWidget {
             bottom: 0,
             top: Dimensions.popularFoodImgSize - 20,
             child: Container(
-                padding: EdgeInsets.only(
-                    left: Dimensions.width20,
-                    right: Dimensions.width20,
-                    top: Dimensions.height20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(Dimensions.radius20),
-                    topLeft: Radius.circular(Dimensions.radius20),
-                  ),
-                  color: Colors.white,
+              padding: EdgeInsets.only(
+                  left: Dimensions.width20,
+                  right: Dimensions.width20,
+                  top: Dimensions.height20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(Dimensions.radius20),
+                  topLeft: Radius.circular(Dimensions.radius20),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    AppColumn(
-                      text: "Peas with meat dish",
+                color: Colors.white,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AppColumn(
+                    text: "Peas with meat dish",
+                  ),
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  BigText(text: "Introduce"),
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableTextWidget(
+                          text:
+                              "Prepara nuestras genuinas Arvejas verdes partidas premium, seleccionados manualmente para darte la mejor calidad y en su envase 100% reciclable más amigable con el medio ambiente.Las arvejas verdes de Iansa Agro son una excelente fuente de proteína vegetal , te recomendamos consumirlas con cereales para lograr una proteína de alto valor biológico. Además son una buena fuente de fibra dietética, otorgando una sensación de saciedad prolongada. También contienen minerales esenciales para nuestro organismo como el hierro, necesario para transportar oxígeno a todo nuestro cuerpo, fósforo y zinc. Conoce los detalles de cada nutriente que aportan las arvejas verdes partidas de Iansa Agro a tu dieta en la tabla con información nutricional en esta página."),
                     ),
-                    SizedBox(
-                      height: Dimensions.height20,
-                    ),
-                    BigText(text: "Introduce"),
-                    SizedBox(
-                      height: Dimensions.height20,
-                    ),
-                    Expanded(
-                      child: SingleChildScrollView(
-                        child: ExpandableTextWidget(
-                            text:
-                                "Prepara nuestras genuinas Arvejas verdes partidas premium, seleccionados manualmente para darte la mejor calidad y en su envase 100% reciclable más amigable con el medio ambiente.Las arvejas verdes de Iansa Agro son una excelente fuente de proteína vegetal , te recomendamos consumirlas con cereales para lograr una proteína de alto valor biológico. Además son una buena fuente de fibra dietética, otorgando una sensación de saciedad prolongada. También contienen minerales esenciales para nuestro organismo como el hierro, necesario para transportar oxígeno a todo nuestro cuerpo, fósforo y zinc. Conoce los detalles de cada nutriente que aportan las arvejas verdes partidas de Iansa Agro a tu dieta en la tabla con información nutricional en esta página."),
-                      ),
-                    )
-                  ],
-                )),
+                  )
+                ],
+              ),
+            ),
           ),
         ],
       ),
